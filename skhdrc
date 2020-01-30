@@ -29,10 +29,12 @@ shift + alt - 0 : yabai -m space --balance
 shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 
 # make floating window fill left-half of screen
-shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# qaisjp: disabled to prevent text navigation being clobbered
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
 
 # make floating window fill right-half of screen
-shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
+# qaisjp: disabled to prevent text navigation being clobbered
+# shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 shift + cmd - n : yabai -m space --create && \
