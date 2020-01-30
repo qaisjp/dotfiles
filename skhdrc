@@ -1,5 +1,6 @@
 # open terminal
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
+# qaisjp: disabled because clobbers common website confirm hotkey (and i don't use this)
+# cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
 # quickly reload config
 fn + shift - q : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; skhd --reload
