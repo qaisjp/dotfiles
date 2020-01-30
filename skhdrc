@@ -2,6 +2,14 @@
 # qaisjp: disabled because clobbers common website confirm hotkey (and i don't use this)
 # cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
+# todo: terminal scratchpad
+# - should toggle iTerm
+# - should use '§' (a.k.a `non_us_backslash` on karabiner)
+# - to keep on top: `yabai -m window --toggle topmost`
+# - to make it appear on all spaces: `yabai -m window --toggle sticky`
+# - to float the window: `yabai -m window --toggle float`
+# - to center on screen (dimension need to be adjusted): `yabai -m window --grid 4:4:1:1:2:2`
+
 # quickly reload config
 fn + shift - q : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; skhd --reload
 
