@@ -2,6 +2,14 @@
 
 These dotfiles are for macOS. On Linux — which is currently DICE, a flavour of Scientific Linux 7 — I use stuff that is in my [Xmonad](https://github.com/qaisjp/xmonad) repo (and more).
 
+Some of this work was inspired by [/u/sptz's post on /r/macOS](https://www.reddit.com/r/MacOS/comments/evk0pu/yabai_twm_for_macos/).
+
+* **window manager**: [yabai](https://github.com/koekeishiya/yabai)
+* **hotkeys**: [skhd](https://github.com/koekeishiya/skhd)
+* **keyboard customisation**: [karabiner elements](https://github.com/pqrs-org/Karabiner-Elements)
+* **vscode opacity**: [vibrancy](https://github.com/EYHN/vscode-vibrancy)
+* **terminal**: [iterm 2](https://iterm2.com/)
+* **font**: [cascadia code](https://github.com/microsoft/cascadia-code)
 
 **Files**
 
