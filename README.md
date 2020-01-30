@@ -28,6 +28,16 @@ Use the following commands (or notes) to apply the files from this repo. Files f
 
 - to make stuff be more like my experience using xmonad on DICE. which likely can never happen. it only worked because on Linux the super key was rarely used. (super was my mod key)
 
+## Status bar
+
+The [simple status bar that ships with yabai](https://github.com/koekeishiya/yabai/wiki/Configuration#status-bar) is used.
+
+This setting mentioned below is enabled:
+
+> The status bar is not intended to be used with the macOS menu bar visible. You can turn on autohiding of the macOS menubar so that it only shows up when you move your cursor to access it: System Preferences -> General -> Automatically hide and show the menu bar.
+
+Maybe we can switch to `xmobar`? Maybe I shouldn't, I don't need a reason to have Haskell installed anymore. Cabal is awful — it doesn't support uninstall. Stack is meant for projects. Bye Haskell, I guess.
+
 ## Karabiner settings
 
 I use Karabiner (beta) to change some default keybinds
