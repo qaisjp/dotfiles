@@ -53,6 +53,7 @@ Complex modifications:
 Simple modifications:
 
 - Swap `left_command` and `left_option`, because my `left_command` needs me to press harder (I need to go to the Genius bar!)
+- Map `non_us_backslash` to `right_command`. This makes it easier to switch spaces. Resolving [#<span></span>107](https://github.com/koekeishiya/skhd/issues/107) should get rid of this.
 
 Also, I enabled `Manipulate LED` under the `Caps Lock LED` column on the "Devices" tab because otherwise the LED stops working.
 
