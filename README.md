@@ -33,3 +33,8 @@ Simple modifications:
 - Swap `left_command` and `left_option`, because my `left_command` needs me to press harder (I need to go to the Genius bar!)
 
 Also, I enabled `Manipulate LED` under the `Caps Lock LED` column on the "Devices" tab because otherwise the LED stops working.
+
+## Other tips
+
+- Restart `yabai` using `launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"`
+- Reload `skhd` using `skhd -r` or `skhd --reload`
