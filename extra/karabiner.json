@@ -1,0 +1,29 @@
+// This is an extract of karabiner.json
+//
+// Add the below object in the .profiles[0].complex_modifications.rules array
+{
+    "description": "Cmd+Shift+X to Lock Screen",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "x",
+                "modifiers": {
+                    "mandatory": [
+                        "command",
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "q",
+                    "modifiers": [
+                        "left_control",
+                        "left_command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
