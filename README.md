@@ -26,6 +26,7 @@ Complex modifications:
 - PC-Style Home/End
 - Cmd+Shift+X to Lock Screen
     - This is not a default complex modification. See [extra/karabiner.json](extra/karabiner.json).
+    - This works by mapping the input keybind to macOS' lock screen keybind: `ctrl + cmd + q`
 
 Simple modifications:
 
