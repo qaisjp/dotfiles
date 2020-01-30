@@ -1,3 +1,5 @@
+# Also see: /usr/local/Cellar/skhd/0.3.5/share/skhd/examples/skhdrc
+
 # open terminal
 # qaisjp: disabled because clobbers common website confirm hotkey (and i don't use this)
 # cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
