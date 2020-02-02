@@ -44,7 +44,7 @@ I use Karabiner (beta) to change some default keybinds
 
 Complex modifications:
 
-- Quit application by holding command-q
+- Quit application by holding command-q (modified to use `left_command` as input, rather than just any `command`)
 - PC-Style Home/End
 - Cmd+Shift+X to Lock Screen
     - This is not a default complex modification. See [extra/karabiner.json](extra/karabiner.json).
