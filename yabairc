@@ -43,6 +43,9 @@ yabai -m config left_padding                 10
 yabai -m config right_padding                10
 yabai -m config window_gap                   10
 
+# float system preferences
+yabai -m rule --add app='^System Preferences$' manage=off
+
 # update battery loop from wiki
 # https://github.com/koekeishiya/yabai/wiki/Tips-and-tricks#updating-battery-icon-in-status-bar-based-on-battery-level
 function update_battery_loop() {
