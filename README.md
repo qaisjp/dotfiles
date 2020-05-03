@@ -61,3 +61,19 @@ Also, I enabled `Manipulate LED` under the `Caps Lock LED` column on the "Device
 
 - Restart `yabai` using `launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"`
 - Reload `skhd` using `skhd -r` or `skhd --reload`
+
+# Windows stuff
+
+I use scoop.
+
+- Install `gh` using https://github.com/cli/cli
+- `scoop install msys2`
+- `scoop install ag`
+
+**[The difference between and MSYS2 MinGW](https://sourceforge.net/p/msys2/discussion/general/thread/dcf8f4d3/)**
+
+- MSYS2 is based on Cygwin and knows how to understand POSIX conventions like paths (`/usr/bin/`, `/etc`) as well as special devices like `/dev/null`, `/dev/clipboard`, etc and many other things. The POSIX emulation layer is done inside `msys-2.0.dll` and incurs a performance penalty that can be significant for heavy file-centric software (e.g. `git`).
+- MinGW is a set of toolchains to build native Windows applications.
+- **MSYS2 is slower than MinGW** - so you should prefer to install using scoop than in MinGW.
+
+TL;DR just prefer MinGW.
