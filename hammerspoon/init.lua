@@ -1,4 +1,7 @@
 --[[
+
+Depends on http://www.hammerspoon.org/Spoons/URLDispatcher.html
+
 Copy and paste this URL into each Chrome profile: `chrome://version/#:~:text=Profile%20Path`
 
 Under “Profile Path”, look for your profile name:
