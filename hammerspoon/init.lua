@@ -27,7 +27,24 @@ local sendToProfile = function(t)
     return {t[1], nil, fn}
 end
 
+
+local function catchZoom(fallbackProfile)
+    local fallback = sendToProfile({"", fallbackProfile})[3]
+    local fn = function(url)
+        local joinCode = tonumber(string.match(url, "company.zoom.us/j/(%d+)"))
+        joinCode = joinCode or tonumber(string.match(url, "company.zoom.us/integration/(%d+)"))
+        if joinCode then
+            local url = "zoommtg://company.zoom.us/join?action=join&confno=" .. joinCode
+            hs.urlevent.openURL(url)
+        else
+            fallback(url)
+        end
+    end
+    return {"company.zoom.us", nil, fn}
+end
+
 spoon.URLDispatcher.url_patterns = {
+    catchZoom("Default"), -- Open Zoom links (e.g. from Slack or other apps)
     sendToProfile{"work.com", "Default"}, -- Anything on work domain
     sendToProfile{"groups.google.com", "Default"}, -- Google Groups
 
