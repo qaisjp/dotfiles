@@ -27,6 +27,7 @@ Use the following commands (or notes) to apply the files from this repo. Files f
 ## wishes
 
 - to make stuff be more like my experience using xmonad on DICE. which likely can never happen. it only worked because on Linux the super key was rarely used. (super was my mod key)
+- get into spacemacs, could use https://github.com/easymotion/vim-easymotion#readme
 
 ## Status bar
 
