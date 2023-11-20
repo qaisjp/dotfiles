@@ -36,3 +36,15 @@ function psc () (
   # TODO: not sure how this behaves for branches with spaces in them?
   git push --force --atomic origin "${commits[@]}"
 )
+
+# psa = push stack all
+function psa () (
+  set -e
+
+  commits=()
+  while IFS='' read -r line; do
+    commits+=("$line")
+  done < <(git log origin/master.. --format='%H %s' | grep '\[STACK POINTER\]' | cut -w -f1)
+
+  psc "${commits[@]}"
+)
