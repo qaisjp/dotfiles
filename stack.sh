@@ -48,3 +48,14 @@ function psa () (
 
   psc "${commits[@]}"
 )
+
+# cs = create stack
+function cs() (
+  set -e
+  branch_name="$1"
+  if [ -z "$branch_name" ]; then
+    echo "cs: branch name not specified"
+    return
+  fi
+  git commit -m "[STACK POINTER] $branch_name" --allow-empty
+)
