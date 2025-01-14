@@ -1,0 +1,54 @@
+# A list of all built-in modifier and literal keywords can
+# be found at https://github.com/koekeishiya/skhd/issues/1
+#
+# Example yabai / skhd configs:
+#  - https://github.com/koekeishiya/skhd/blob/master/examples/skhdrc
+#  - https://github.com/koekeishiya/dotfiles/blob/master/skhd/skhdrc
+
+# open iterm:
+cmd - return : ~/.config/yabai/scripts/open-iterm.sh
+
+# focus window/display:
+alt - x : yabai -m window --focus recent
+alt - h : yabai -m window --focus west || yabai -m display --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east || yabai -m display --focus east
+
+# move windows:
+shift + alt - h : yabai -m window --warp west || (yabai -m window --display west; yabai -m display --focus west)
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east || (yabai -m window --display east; yabai -m display --focus east)
+
+# swap window:
+ctrl + shift + alt - x : yabai -m window --swap recent
+ctrl + shift + alt - h : yabai -m window --swap west
+ctrl + shift + alt - j : yabai -m window --swap south
+ctrl + shift + alt - k : yabai -m window --swap north
+ctrl + shift + alt - l : yabai -m window --swap east
+
+# focus space (via Mission Control shortcuts):
+# alt - n: <focus left space>
+# alt - m: <focus right space>
+
+# move window to space:
+shift + alt - n : yabai -m window --space prev && skhd -k "alt-n"
+shift + alt - m : yabai -m window --space next && skhd -k "alt-m"
+
+# balance size of windows:
+shift + alt - 0 : yabai -m space --balance
+
+# create/focus stacks:
+alt - i: yabai -m window --insert stack
+alt - p : yabai -m window --focus stack.next
+alt - o : yabai -m window --focus stack.prev
+
+# toggle float:
+alt - u : yabai -m window --toggle float
+
+# adjust window size:
+# ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
+# ctrl + cmd - j : yabai -m window north --resize bottom:0:20 2> /dev/null || yabai -m window --resize bottom:0:20
+# ctrl + cmd - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai -m window --resize top:0:-20
+# ctrl + cmd - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
