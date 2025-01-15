@@ -26,7 +26,7 @@ yabai_config_args=(
     bottom_padding               12
     left_padding                 12
     right_padding                12
-    window_gap                   20
+    window_gap                   12
 )
 yabai -m config "${yabai_config_args[@]}"
 
