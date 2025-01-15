@@ -1,31 +1,34 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# Global settings
-yabai -m config window_placement             second_child
-yabai -m config window_topmost               on
+yabai_config_args=(
+    # Global settings
+    window_placement             second_child
+    window_topmost               on
 
-yabai -m config split_ratio                  0.50
-yabai -m config auto_balance                 off
+    split_ratio                  0.50
+    auto_balance                 off
 
-yabai -m config window_shadow                on
-yabai -m config window_border                off
-yabai -m config window_opacity               off
+    window_shadow                on
+    window_border                off
+    window_opacity               off
 
-yabai -m config mouse_modifier               fn
-yabai -m config mouse_drop_action            stack
-yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+    mouse_modifier               fn
+    mouse_drop_action            stack
+    mouse_follows_focus          off
+    focus_follows_mouse          off
 
-# highlight color for insert placeholder:
-yabai -m config insert_feedback_color        0xfff2559e
+    # highlight color for insert placeholder:
+    insert_feedback_color        0xfff2559e
 
-# General space settings
-yabai -m config layout                       bsp
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   20
+    # General space settings
+    layout                       bsp
+    top_padding                  12
+    bottom_padding               12
+    left_padding                 12
+    right_padding                12
+    window_gap                   20
+)
+yabai -m config "${yabai_config_args[@]}"
 
 # Application rules:
 yabai -m rule --add app="^System (Preferences|Settings)$" manage=off
