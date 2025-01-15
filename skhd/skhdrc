@@ -5,9 +5,6 @@
 #  - https://github.com/koekeishiya/skhd/blob/master/examples/skhdrc
 #  - https://github.com/koekeishiya/dotfiles/blob/master/skhd/skhdrc
 
-# open iterm:
-cmd - return : ~/.config/yabai/scripts/open-iterm.sh
-
 # focus window/display:
 alt - x : yabai -m window --focus recent
 alt - h : yabai -m window --focus west || yabai -m display --focus west
