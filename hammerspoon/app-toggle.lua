@@ -133,7 +133,7 @@ eventTap2 = hs.eventtap.new(
 
             -- print('property is', inspect({event:getProperty(hs.eventtap.event.properties.keyboardEventKeyboardType)}))
             -- must still return false, otherwise repeat doesn't work
-            return true
+            -- return true
         end
 
 
