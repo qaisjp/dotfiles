@@ -43,7 +43,7 @@ alt - o : yabai -m window --focus stack.prev
 
 # toggle float and center on screen
 alt - u : yabai -m window --toggle float;\
-          yabai -m window --grid 8:8:1:1:6:5
+          yabai -m window --grid 12:9:1:1:7:10
 
 # toggle apps
 alt - s: hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
