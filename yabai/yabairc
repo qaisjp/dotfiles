@@ -15,7 +15,7 @@ yabai_config_args=(
     mouse_modifier               fn
     mouse_drop_action            stack
     mouse_follows_focus          off
-    focus_follows_mouse          autofocus
+    focus_follows_mouse          off
 
     # highlight color for insert placeholder
     insert_feedback_color        0xfff2559e
@@ -33,6 +33,8 @@ yabai -m config "${yabai_config_args[@]}"
 # Application rules
 yabai -m rule --add app="^System (Preferences|Settings)$" manage=off
 yabai -m rule --add app="Raycast" manage=off
+yabai -m rule --add app="CleanShot X" manage=off
+yabai -m rule --add app="Slack" manage=off
 yabai -m rule --add title='Settings$' manage=off
 
 echo "yabai configuration loaded.."
