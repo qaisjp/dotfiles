@@ -1,0 +1,1 @@
+-- From https://git.corp.stripe.com/dbalatero/dotfiles-overlay/blob/4aa12c80267064009c66118ba97f99b8b043ff0c/hammerspoon/private/status-menubar.lua#L1-L179
