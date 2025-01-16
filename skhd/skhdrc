@@ -41,8 +41,9 @@ alt - i: yabai -m window --insert stack
 alt - p : yabai -m window --focus stack.next
 alt - o : yabai -m window --focus stack.prev
 
-# toggle float:
-alt - u : yabai -m window --toggle float
+# toggle float and center on screen
+alt - u : yabai -m window --toggle float;\
+          yabai -m window --grid 8:8:1:1:6:5
 
 # toggle apps
 alt - s: hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
