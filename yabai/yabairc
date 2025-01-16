@@ -39,4 +39,7 @@ yabai -m rule --add app="iTerm" manage=off grid=8:8:1:1:6:5
 yabai -m rule --add title='Settings$' manage=off
 yabai -m rule --add title='Extension Development Host' manage=off grid=8:8:1:1:6:5
 
+# Apply rules to existing windows
+yabai -m rule --apply
+
 echo "yabai configuration loaded.."
