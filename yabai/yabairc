@@ -37,5 +37,6 @@ yabai -m rule --add app="CleanShot X" manage=off
 yabai -m rule --add app="Slack" manage=off grid=8:8:1:1:6:5
 yabai -m rule --add app="iTerm" manage=off grid=8:8:1:1:6:5
 yabai -m rule --add title='Settings$' manage=off
+yabai -m rule --add title='Extension Development Host' manage=off grid=8:8:1:1:6:5
 
 echo "yabai configuration loaded.."
