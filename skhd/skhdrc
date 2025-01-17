@@ -45,6 +45,9 @@ alt - o : yabai -m window --focus stack.prev
 alt - u : yabai -m window --toggle float;\
           yabai -m window --grid 12:9:1:1:7:10
 
+# center on screen
+alt - c: yabai -m window --grid 12:9:1:1:7:10
+
 # toggle apps
 alt - s: hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
 alt - z: hs -c "toggleBundle('us.zoom.xos')"

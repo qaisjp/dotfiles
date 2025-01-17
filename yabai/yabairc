@@ -42,4 +42,7 @@ yabai -m rule --add title='Extension Development Host' manage=off grid=8:8:1:1:6
 # Apply rules to existing windows
 yabai -m rule --apply
 
+# apply borders with github.com/FelixKatz/JankyBorders
+borders active_color=0xffff8500 inactive_color=0xff494d64 width=5 &
+
 echo "yabai configuration loaded.."
