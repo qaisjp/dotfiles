@@ -37,7 +37,7 @@ shift + alt - m : yabai -m window --space next && skhd -k "alt-m"
 shift + alt - 0 : yabai -m space --balance
 
 # create/focus stacks:
-alt - i: yabai -m window --insert stack
+alt - i : yabai -m window --insert stack
 alt - p : yabai -m window --focus stack.next
 alt - o : yabai -m window --focus stack.prev
 
@@ -46,13 +46,13 @@ alt - u : yabai -m window --toggle float;\
           yabai -m window --grid 12:9:1:1:7:10
 
 # center on screen
-alt - c: yabai -m window --grid 12:9:1:1:7:10
+alt - c : yabai -m window --grid 12:9:1:1:7:10
 
 # toggle apps
-alt - s: hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
-alt - z: hs -c "toggleBundle('us.zoom.xos')"
-f1: hs -c "toggleBundle('com.googlecode.iterm2')"
-f2: hs -c "toggleChromeOrVscode()"
+alt - s : hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
+alt - z : hs -c "toggleBundle('us.zoom.xos')"
+f1 : hs -c "toggleBundle('com.googlecode.iterm2')"
+f2 : hs -c "toggleChromeOrVscode()"
 
 # adjust window size:
 # ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
