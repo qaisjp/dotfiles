@@ -3,13 +3,11 @@
 yabai_config_args=(
     # Global settings
     window_placement             second_child
-    window_topmost               on
 
     split_ratio                  0.50
     auto_balance                 off
 
     window_shadow                on
-    window_border                off
     window_opacity               off
 
     mouse_modifier               fn
