@@ -48,6 +48,8 @@ alt - u : yabai -m window --toggle float;\
 # toggle apps
 alt - s: hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
 alt - z: hs -c "toggleBundle('us.zoom.xos')"
+f1: hs -c "toggleBundle('com.googlecode.iterm2')"
+f2: hs -c "toggleChromeOrVscode()"
 
 # adjust window size:
 # ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
