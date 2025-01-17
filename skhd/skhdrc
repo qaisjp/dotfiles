@@ -5,38 +5,38 @@
 #  - https://github.com/koekeishiya/skhd/blob/master/examples/skhdrc
 #  - https://github.com/koekeishiya/dotfiles/blob/master/skhd/skhdrc
 
-# focus window/display:
+# focus window/display
 alt - x : yabai -m window --focus recent
 alt - h : yabai -m window --focus west || yabai -m display --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east || yabai -m display --focus east
 
-# move windows:
+# move windows
 shift + alt - h : yabai -m window --warp west || (yabai -m window --display west; yabai -m display --focus west)
 shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east || (yabai -m window --display east; yabai -m display --focus east)
 
-# swap window:
+# swap window
 ctrl + shift + alt - x : yabai -m window --swap recent
 ctrl + shift + alt - h : yabai -m window --swap west
 ctrl + shift + alt - j : yabai -m window --swap south
 ctrl + shift + alt - k : yabai -m window --swap north
 ctrl + shift + alt - l : yabai -m window --swap east
 
-# focus space (via Mission Control shortcuts):
+# focus space (via Mission Control shortcuts)
 # alt - n: <focus left space>
 # alt - m: <focus right space>
 
-# move window to space:
+# move window to space
 shift + alt - n : yabai -m window --space prev && skhd -k "alt-n"
 shift + alt - m : yabai -m window --space next && skhd -k "alt-m"
 
-# balance size of windows:
+# balance size of windows
 shift + alt - 0 : yabai -m space --balance
 
-# create/focus stacks:
+# create/focus stacks
 alt - i : yabai -m window --insert stack
 alt - p : yabai -m window --focus stack.next
 alt - o : yabai -m window --focus stack.prev
@@ -54,7 +54,7 @@ alt - z : hs -c "toggleBundle('us.zoom.xos')"
 f1 : hs -c "toggleBundle('com.googlecode.iterm2')"
 f2 : hs -c "toggleChromeOrVscode()"
 
-# adjust window size:
+# adjust window size
 # ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
 # ctrl + cmd - j : yabai -m window north --resize bottom:0:20 2> /dev/null || yabai -m window --resize bottom:0:20
 # ctrl + cmd - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai -m window --resize top:0:-20
