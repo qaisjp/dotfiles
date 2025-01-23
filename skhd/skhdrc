@@ -41,6 +41,9 @@ alt - i : yabai -m window --insert stack
 alt - p : yabai -m window --focus stack.next
 alt - o : yabai -m window --focus stack.prev
 
+# rotate screen
+alt - space : yabai -m space --rotate 90
+
 # toggle float and center on screen
 alt - u : yabai -m window --toggle float;\
           yabai -m window --grid 12:9:1:1:7:10
