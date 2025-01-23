@@ -38,8 +38,8 @@ shift + alt - 0 : yabai -m space --balance
 
 # create/focus stacks
 alt - i : yabai -m window --insert stack
-alt - p : yabai -m window --focus stack.next
-alt - o : yabai -m window --focus stack.prev
+alt - p : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+alt - o : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
 
 # rotate screen
 alt - space : yabai -m space --rotate 90
