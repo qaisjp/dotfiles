@@ -53,9 +53,13 @@ alt - c : yabai -m window --grid 12:9:1:1:7:10
 
 # toggle apps
 alt - s : hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
-alt - z : hs -c "toggleBundle('us.zoom.xos')"
 f1 : hs -c "toggleBundle('com.googlecode.iterm2')"
 f2 : hs -c "toggleChromeOrVscode()"
+
+# toggle zoom
+# - if there are any zoom windows, just toggle the window (using Hammerspoon toggleBundle)
+# - otherwise join the next meeting with the help of meetingbar
+alt - z : yabai -m query --windows | jq '.[] | select(.app == "zoom.us")' -e > /dev/null && hs -c "toggleBundle('us.zoom.xos')" || open "meetingbar://joinnext"
 
 # adjust window size
 # ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
