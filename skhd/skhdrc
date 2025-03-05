@@ -53,6 +53,7 @@ alt - c : yabai -m window --grid 12:9:1:1:7:10
 
 # toggle apps
 alt - s : hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
+alt + shift - s : hs -c "toggleBundle('com.spotify.client')"
 f1 : hs -c "toggleBundle('com.googlecode.iterm2')"
 f2 : hs -c "toggleChromeOrVscode()"
 
