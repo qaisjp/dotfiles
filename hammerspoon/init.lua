@@ -96,7 +96,8 @@ spoon.URLDispatcher.url_patterns = {
     sendToProfile("google.zoom", "Default"), -- Zoom SSO goes to Default Profile
     sendToProfile("tuple.app", "Default"), -- Tuple
     sendToProfile("amazonaws.com", "Default"), -- AWS
-    sendToProfile("adobe", "Default"), -- AWS
+    sendToProfile("adobe", "Default"), -- Adobe
+    sendToProfile("cursor.com", "Default"), -- Cursor
 
     -- Google stuff
     sendToProfile("calendar.google.com", "Default"),
