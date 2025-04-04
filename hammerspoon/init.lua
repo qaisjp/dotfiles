@@ -39,6 +39,34 @@ inspect = require 'inspect'
 -- end)
 
 
+-- Keep macbook awake when at home
+local isLocked = false
+function autoCaffeinate()
+    if hs.screen.mainScreen():name() == "DELL U4025QW" and not isLocked then
+        -- print("auto-caffeinate on")
+        hs.caffeinate.set("systemIdle", true, false)
+        hs.caffeinate.set("displayIdle", true, false)
+    else
+        -- print("auto-caffeinate off")
+        hs.caffeinate.set("systemIdle", false, false)
+        hs.caffeinate.set("displayIdle", false, false)
+    end
+end
+hs.timer.doEvery(hs.timer.minutes(3), autoCaffeinate)
+autoCaffeinate()
+
+function onCaffeinateEvent(event)
+    -- print("caffeinate event", event)
+    if event == hs.caffeinate.watcher.screensDidLock then
+        isLocked = true
+        -- print("just locked")
+    elseif event == hs.caffeinate.watcher.screensDidUnlock then
+        isLocked = false
+        -- print("just unlocked")
+    end
+end
+hs.caffeinate.watcher.new(onCaffeinateEvent):start()
+
 hs.loadSpoon("URLDispatcher")
 local function sendToProfile(match, profile)
     local fn = function(url)
