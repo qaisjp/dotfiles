@@ -33,6 +33,7 @@ yabai -m rule --add app="^System (Preferences|Settings)$" manage=off
 yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="CleanShot X" manage=off
 yabai -m rule --add app="Slack" manage=off grid=12:9:1:1:7:10
+yabai -m rule --add app="Spotify" manage=off grid=12:9:1:1:7:10
 yabai -m rule --add app="iTerm" manage=off grid=12:9:1:1:7:10
 yabai -m rule --add app="zoom.us" manage=off grid=12:9:1:1:7:10
 yabai -m rule --add title='Settings$' manage=off
