@@ -52,9 +52,9 @@ alt - u : yabai -m window --toggle float;\
 alt - c : yabai -m window --grid 12:9:1:1:7:10
 
 # toggle apps
-alt - s : hs -c "toggleBundle('com.tinyspeck.slackmacgap')"
-alt + shift - s : hs -c "toggleBundle('com.spotify.client')"
-f1 : hs -c "toggleBundle('com.googlecode.iterm2')"
+alt - s : hs -c "toggleBundle('com.tinyspeck.slackmacgap', 'floating')"
+alt + shift - s : hs -c "toggleBundle('com.spotify.client', 'floating')"
+f1 : hs -c "toggleBundle('com.googlecode.iterm2', 'floating')"
 f2 : hs -c "toggleChromeOrVscode()"
 
 # toggle zoom
