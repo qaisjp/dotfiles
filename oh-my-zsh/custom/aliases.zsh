@@ -33,6 +33,7 @@ a() {
 #}
 
 export PAY_DEFAULT_EDITOR=cursor
+alias t="pay remote ssh --tmux"
 alias code=cursor
 alias rg="rg -S"
 #alias st="pay stack"
