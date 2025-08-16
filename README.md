@@ -1,5 +1,10 @@
 # dotfiles (2025)
 
+## aerospace
+
+As per [a note on mission control](https://nikitabobko.github.io/AeroSpace/guide#a-note-on-mission-control) I've enabled "Group windows by application" `defaults write com.apple.dock expose-group-apps -bool true && killall Dock`.
+
+As per [this note](https://nikitabobko.github.io/AeroSpace/guide#a-note-on-displays-have-separate-spaces) I've also disabled "Displays have separate spaces".
 
 # dotfiles (old)
 
