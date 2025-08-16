@@ -42,7 +42,7 @@ alt - p : yabai -m window --focus stack.next || yabai -m window --focus stack.fi
 alt - o : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
 
 # rotate screen
-alt - space : yabai -m space --rotate 90
+shift + alt - space : yabai -m space --rotate 90
 
 # toggle float and center on screen
 alt - u : yabai -m window --toggle float;\
