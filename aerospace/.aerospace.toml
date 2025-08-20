@@ -76,6 +76,10 @@ automatically-unhide-macos-hidden-apps = false
     if.app-name-regex-substring = '^Cursor$'
     run = 'move-node-to-workspace A'
 
+[[on-window-detected]]
+    if.app-id = 'us.zoom.xos'
+    run = 'move-node-to-workspace Z'
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -161,6 +165,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-w = 'workspace W'
     alt-x = 'workspace X'
     alt-y = 'workspace Y'
+    alt-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -216,9 +221,10 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+    alt-shift-z = ['move-node-to-workspace Z', 'mode main']
 
-    alt-s = 'move-node-to-workspace S'
-    alt-shift-s = 'move-node-to-workspace Spotify'
+    alt-s = ['move-node-to-workspace S', 'mode main']
+    alt-shift-s = ['move-node-to-workspace Spotify', 'mode main']
 
     down = 'volume down'
     up = 'volume up'
