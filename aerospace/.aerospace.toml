@@ -144,7 +144,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-c = 'workspace C'
     alt-d = 'workspace D'
     alt-e = 'workspace E'
-    alt-f = 'workspace F'
+    alt-f = 'fullscreen --no-outer-gaps'
     alt-g = 'workspace G'
     alt-i = 'workspace I'
     alt-m = 'workspace M'
@@ -153,14 +153,14 @@ automatically-unhide-macos-hidden-apps = false
     alt-p = 'workspace P'
     alt-q = 'workspace Q'
     alt-r = 'workspace R'
-    alt-s = 'workspace S'
+    alt-s = 'exec-and-forget aerospace workspace S --fail-if-noop || aerospace workspace-back-and-forth'
+    alt-shift-s = 'exec-and-forget aerospace workspace Spotify --fail-if-noop || aerospace workspace-back-and-forth'
     alt-t = 'workspace T'
     alt-u = 'workspace U'
     alt-v = 'workspace V'
     alt-w = 'workspace W'
     alt-x = 'workspace X'
     alt-y = 'workspace Y'
-    alt-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -177,7 +177,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-c = 'move-node-to-workspace C'
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-e = 'move-node-to-workspace E'
-    alt-shift-f = 'move-node-to-workspace F'
     alt-shift-g = 'move-node-to-workspace G'
     alt-shift-i = 'move-node-to-workspace I'
     alt-shift-m = 'move-node-to-workspace M'
@@ -193,7 +192,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-w = 'move-node-to-workspace W'
     alt-shift-x = 'move-node-to-workspace X'
     alt-shift-y = 'move-node-to-workspace Y'
-    alt-shift-z = 'move-node-to-workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -219,8 +217,8 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
 
-    # Usually alt-shift-s opens Spotify
-    alt-shift-s = 'move-node-to-workspace S'
+    alt-s = 'move-node-to-workspace S'
+    alt-shift-s = 'move-node-to-workspace Spotify'
 
     down = 'volume down'
     up = 'volume up'
