@@ -30,15 +30,15 @@ yabai -m config "${yabai_config_args[@]}"
 
 # Application rules
 yabai -m rule --add app="^System (Preferences|Settings)$" manage=off
-yabai -m rule --add app="Raycast" manage=off
-yabai -m rule --add app="CleanShot X" manage=off
+yabai -m rule --add app="Raycast" manage=off # floats by default in aerospace
+yabai -m rule --add app="CleanShot X" manage=off # floats by default in aerospace
 yabai -m rule --add app="Slack" manage=off grid=12:9:1:1:7:10
 yabai -m rule --add app="Spotify" manage=off grid=12:9:1:1:7:10
 yabai -m rule --add app="iTerm" manage=off grid=12:9:1:1:7:10
 yabai -m rule --add app="zoom.us" manage=off grid=12:9:1:1:7:10
-yabai -m rule --add title='Settings$' manage=off
+yabai -m rule --add title='Settings$' manage=off # floats by default in aerospace
 yabai -m rule --add title='Extension Development Host' manage=off grid=8:8:1:1:6:5
-yabai -m rule --add app="Screen Studio" manage=off
+yabai -m rule --add app="Screen Studio" manage=off # floats by default in aerospace
 
 # Apply rules to existing windows
 yabai -m rule --apply
