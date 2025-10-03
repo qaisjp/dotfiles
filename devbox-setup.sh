@@ -17,9 +17,7 @@ fi
 
 echo "💻 Installing oh-my-zsh..."
 if [ ! -d ~/.oh-my-zsh ]; then
-  wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ./zsh-installer.sh
-  sudo chmod +x ./zsh-installer.sh
-  ~/zsh-installer.sh --unattended --keep-zshrc
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
   echo "✅ Successfully installed oh-my-zsh."
 else
