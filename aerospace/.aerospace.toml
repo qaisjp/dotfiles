@@ -6,7 +6,7 @@
 after-startup-command = [
     # JankyBorders has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
-    'exec-and-forget borders active_color=0xffff8500 inactive_color=0xff494d64 width=10 blacklist="Screen Studio"'
+    'exec-and-forget borders active_color=0xffff8500 inactive_color=0xff494d64 width=6 blacklist="Screen Studio"'
 ]
 
 # Start AeroSpace at login
@@ -19,7 +19,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 12
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -35,6 +35,10 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+on-focus-changed = [
+  'exec-and-forget [ $(aerospace list-windows --workspace focused | wc -l) -eq 1 ] && borders width=0.0 || borders width=6.0'
+]
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -80,6 +84,14 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'us.zoom.xos'
     run = 'move-node-to-workspace Z'
 
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+    if.app-id = 'com.spotify.client'
+    run = 'move-node-to-workspace Spotify'
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -106,12 +118,9 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # You can uncomment the following lines to open up terminal with alt + enter shortcut
     # (like in i3)
-    # alt-enter = '''exec-and-forget osascript -e '
-    # tell application "Terminal"
-    #     do script
-    #     activate
-    # end tell'
-    # '''
+    alt-enter = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.googlecode.iterm2', 'iterm')"'''
+    alt-shift-enter = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.todesktop.230313mzl4w4u92', 'cursor')"'''
+    alt-c = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.google.Chrome', 'chrome')"'''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
@@ -136,16 +145,16 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
+    # alt-3 = 'workspace 3'
     alt-4 = 'workspace 4'
     alt-5 = 'workspace 5'
     alt-6 = 'workspace 6'
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+    # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     alt-b = 'workspace B'
-    alt-c = 'workspace C'
+    # alt-c = 'workspace C'
     alt-d = 'workspace D'
     alt-e = 'workspace E'
     alt-f = 'fullscreen --no-outer-gaps'
@@ -162,7 +171,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-t = 'workspace T'
     alt-u = 'workspace U'
     alt-v = 'workspace V'
-    alt-w = 'workspace W'
+    # alt-w = 'workspace W'
     alt-x = 'workspace X'
     alt-y = 'workspace Y'
     alt-z = 'exec-and-forget aerospace workspace Z --fail-if-noop || aerospace workspace-back-and-forth'
@@ -177,9 +186,9 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-a = 'move-node-to-workspace A'
+    # alt-shift-a = 'move-node-to-workspace A'
     alt-shift-b = 'move-node-to-workspace B'
-    alt-shift-c = 'move-node-to-workspace C'
+    # alt-shift-c = 'move-node-to-workspace C'
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-e = 'move-node-to-workspace E'
     alt-shift-g = 'move-node-to-workspace G'
@@ -194,7 +203,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-t = 'move-node-to-workspace T'
     alt-shift-u = 'move-node-to-workspace U'
     alt-shift-v = 'move-node-to-workspace V'
-    alt-shift-w = 'move-node-to-workspace W'
+    # alt-shift-w = 'move-node-to-workspace W'
     alt-shift-x = 'move-node-to-workspace X'
     alt-shift-y = 'move-node-to-workspace Y'
 

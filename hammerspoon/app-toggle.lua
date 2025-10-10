@@ -36,6 +36,20 @@ function toggleBundle(bundle, group)
     end
 end
 
+lastWindow = nil
+function toggleBundleFocusOnly(bundle)
+    local front = hs.application.frontmostApplication()
+    -- print(inspect(front:bundleID()))
+    if front:bundleID() == bundle then
+        if lastWindow then
+            lastWindow:focus()
+        end
+    else
+        lastWindow = hs.window.focusedWindow()
+        hs.application.launchOrFocusByBundleID(bundle)
+    end
+end
+
 function toggleChromeOrVscode()
     -- hide all bundles from the floating group
     for bundle, _ in pairs(groups['floating'] or {}) do

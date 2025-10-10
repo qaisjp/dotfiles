@@ -10,6 +10,10 @@ require "app-toggle"
 
 inspect = require 'inspect'
 
+-- Aerospace = hs.loadSpoon('Aerospace')
+-- Aerospace:bindHotkeys({})
+-- Aerospace:start()
+
 -- saved = hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window, appName)
 --     local app = window:application()
 --     print('windowFocused: ' .. window:title(), inspect{
@@ -141,4 +145,3 @@ spoon.URLDispatcher.url_patterns = {
 }
 
 spoon.URLDispatcher:start()
-
