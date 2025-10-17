@@ -33,9 +33,9 @@ if ! [ -x "$(command -v fzf)" ]; then
 fi
 echo "✅ Successfully installed fzf."
 
-# Symlink custom folder
-ln -s "$HOME/.dotfiles/oh-my-zsh/custom/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
-ln -s "$HOME/.dotfiles/oh-my-zsh/custom/themes/robbynew.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/robbynew.zsh-theme"
+# Symlink zsh stuff
+ln -f -s "$HOME/.dotfiles/oh-my-zsh/custom/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
+ln -f -s "$HOME/.dotfiles/oh-my-zsh/custom/themes/robbynew.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/robbynew.zsh-theme"
 
 # Replace ZSH_THEME="robbyrussell" with ZSH_THEME="robbynew"
 sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="robbynew"/g' "$HOME/.zshrc"
