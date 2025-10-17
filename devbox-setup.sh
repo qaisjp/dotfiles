@@ -14,6 +14,8 @@ fi
 
 # ----- remote -----
 
+# Monorepo optimisation
+git config --global push.negotiate true
 
 echo "💻 Installing oh-my-zsh..."
 if [ ! -d ~/.oh-my-zsh ]; then
@@ -30,3 +32,7 @@ if ! [ -x "$(command -v fzf)" ]; then
   ~/.fzf/install --bin
 fi
 echo "✅ Successfully installed fzf."
+
+# Symlink custom folder
+ln -s "$HOME/.dotfiles/oh-my-zsh/custom/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
+ln -s "$HOME/.dotfiles/oh-my-zsh/custom/themes/robbynew.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/robbynew.zsh-theme"
