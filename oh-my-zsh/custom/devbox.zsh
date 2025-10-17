@@ -1,1 +1,1 @@
-path+=~/.local/bin
+path+=~/.fzf/bin
