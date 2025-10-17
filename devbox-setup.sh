@@ -38,4 +38,4 @@ ln -f -s "$HOME/.dotfiles/oh-my-zsh/custom/aliases.zsh" "$HOME/.oh-my-zsh/custom
 ln -f -s "$HOME/.dotfiles/oh-my-zsh/custom/themes/robbynew.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/robbynew.zsh-theme"
 
 # Replace ZSH_THEME="robbyrussell" with ZSH_THEME="robbynew"
-sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="robbynew"/g' "$HOME/.zshrc"
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="robbynew"/g' "$HOME/.zshrc"
