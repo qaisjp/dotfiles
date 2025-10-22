@@ -15,6 +15,7 @@ fi
 # ----- remote -----
 
 
+CPU=$(uname -m)
 
 install_neovim() {
   if ! which nvim >/dev/null; then
