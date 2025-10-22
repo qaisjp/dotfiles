@@ -14,10 +14,29 @@ fi
 
 # ----- remote -----
 
+
+
+install_neovim() {
+  if ! which nvim >/dev/null; then
+    mkdir -p ~/.local/bin
+    pushd ~/.local/bin >/dev/null
+    if [ "$CPU" = "x86_64" ]; then
+      curl -sL https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.appimage -o nvim
+    else
+      curl -sL https://github.com/neovim/neovim/releases/download/stable/nvim-linux-arm64.appimage -o nvim
+    fi
+    chmod +x nvim
+    popd >/dev/null
+  fi
+}
+
+
+
+
 # Monorepo optimisation
 git config --global push.negotiate true
 
-echo "💻 Installing oh-my-zsh..."
+echo "💻 Installing oh-my-zsh…"
 if [ ! -d ~/.oh-my-zsh ]; then
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
@@ -26,12 +45,17 @@ else
   echo "✅ oh-my-zsh is already installed. Skipping step."
 fi
 
-echo "🦥 Installing fzf..."
+echo "🦥 Installing fzf…"
 if ! [ -x "$(command -v fzf)" ]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install --all
 fi
 echo "✅ Successfully installed fzf."
+
+echo "✏️ Installing neovim…"
+install_neovim
+echo "✅ Successfully installed neovim."
+
 
 # Symlink zsh stuff
 ln -f -s "$HOME/.dotfiles/oh-my-zsh/custom/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"
