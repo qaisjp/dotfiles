@@ -31,7 +31,8 @@ install_neovim() {
   fi
 }
 
-
+# Use tsgo
+/pay/deploy/update-jsonc-value-hosts/current/package/dist/update-jsonc-value.js -u -f ~/.vscode-server/data/Machine/settings.json -n typescript.experimental.useTsgo -v true
 
 
 # Monorepo optimisation
