@@ -38,6 +38,7 @@ alias code=cursor
 alias rg="rg -S"
 #alias st="pay stack"
 alias gcaf='git commit -a --fixup'
+alias gri='git rebase -i'
 alias skip="git commit -m '[ci-skip]'"
 alias skipa="git commit -m '[ci-skip]' -a"
 alias tf="sc-terraform"
