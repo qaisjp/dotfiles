@@ -38,6 +38,14 @@ install_neovim() {
 # Monorepo optimisation
 git config --global push.negotiate true
 
+# Prefs
+git config --global rebase.autosquash true
+git config --global rebase.updateRefs true
+git config --global rerere.enabled true
+git config --global oh-my-zsh.hide-dirty 1
+git config --global commit.cleanup scissors 
+
+
 echo "💻 Installing oh-my-zsh…"
 if [ ! -d ~/.oh-my-zsh ]; then
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
