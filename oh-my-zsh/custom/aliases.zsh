@@ -34,6 +34,7 @@ a() {
 
 export PAY_DEFAULT_EDITOR=cursor
 alias dotfiles-pull="git -C ~/.dotfiles pull"
+alias st="pay stack"
 alias t="pay remote ssh --tmux"
 alias code=cursor
 alias rg="rg -S"
