@@ -55,6 +55,15 @@ else
   echo "✅ oh-my-zsh is already installed. Skipping step."
 fi
 
+echo "💻 Installing zsh-autosuggestions..."
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+  echo "✅ Successfully installed zsh-autosuggestions."
+else
+  echo "✅ zsh-autosuggestions is already installed. Skipping step."
+fi
+
 echo "🦥 Installing fzf…"
 if ! [ -x "$(command -v fzf)" ]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
