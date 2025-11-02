@@ -48,8 +48,7 @@ git config --global commit.cleanup scissors
 
 echo "💻 Installing oh-my-zsh…"
 if [ ! -d ~/.oh-my-zsh ]; then
-   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
-
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
   echo "✅ Successfully installed oh-my-zsh."
 else
   echo "✅ oh-my-zsh is already installed. Skipping step."
@@ -58,7 +57,7 @@ fi
 echo "💻 Installing zsh-autosuggestions..."
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
+  sed '/plugins=(git)/a plugins+=zsh-autosuggestions' ~/.zshrc
   echo "✅ Successfully installed zsh-autosuggestions."
 else
   echo "✅ zsh-autosuggestions is already installed. Skipping step."
