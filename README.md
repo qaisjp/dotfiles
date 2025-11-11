@@ -1,5 +1,14 @@
 # dotfiles (2025)
 
+
+Enable sudo with Touch ID:
+
+```
+sudo vi /etc/pam.d/sudo
+# Add the following line to the top, below the header:
+# auth       sufficient     pam_tid.so
+```
+
 ## aerospace
 
 As per [a note on mission control](https://nikitabobko.github.io/AeroSpace/guide#a-note-on-mission-control) I've enabled "Group windows by application"
@@ -15,6 +24,7 @@ As per [this note](https://nikitabobko.github.io/AeroSpace/goodies#disable-open-
 ```
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 ```
+
 
 # dotfiles (old)
 
