@@ -43,7 +43,8 @@ git config --global rebase.autosquash true
 git config --global rebase.updateRefs true
 git config --global rerere.enabled true
 git config --global oh-my-zsh.hide-dirty 1
-git config --global commit.cleanup scissors 
+git config --global commit.cleanup scissors
+git config --global commit.verbose true
 
 
 echo "💻 Installing oh-my-zsh…"
