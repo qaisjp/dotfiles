@@ -76,6 +76,22 @@ automatically-unhide-macos-hidden-apps = true
     run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
+    if.window-title-regex-substring = 'aerospace1'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+    if.window-title-regex-substring = 'aerospace2'
+    run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+    if.window-title-regex-substring = 'aerospace4'
+    run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+    if.window-title-regex-substring = 'aerospace5'
+    run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
     if.window-title-regex-substring = 'dotfiles'
     if.app-name-regex-substring = '^Cursor$'
     run = 'move-node-to-workspace A'
