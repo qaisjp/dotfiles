@@ -106,3 +106,4 @@ I use scoop.
 - **MSYS2 is slower than MinGW** - so you should prefer to install using scoop than in MinGW.
 
 TL;DR just prefer MinGW.
+qaisjp@gmail.com

@@ -32,11 +32,11 @@ a() {
 #	cd "$HOME/stripe-b/$1"
 #}
 
-export PAY_DEFAULT_EDITOR=cursor
+#export PAY_DEFAULT_EDITOR=cursor
 alias dotfiles-pull="git -C ~/.dotfiles pull"
 alias st="pay stack"
-alias t="pay ssh --tmux --name"
-alias code=cursor
+alias t="pay remote ssh --tmux --skip-ready-check"
+#alias code=cursor
 alias rg="rg -S"
 #alias st="pay stack"
 alias gcaf='git commit -a --fixup'
