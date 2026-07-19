@@ -136,7 +136,7 @@ automatically-unhide-macos-hidden-apps = true
     # You can uncomment the following lines to open up terminal with alt + enter shortcut
     # (like in i3)
     alt-enter = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.googlecode.iterm2', 'iterm')"'''
-    alt-shift-enter = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.todesktop.230313mzl4w4u92', 'cursor')"'''
+    alt-shift-enter = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.microsoft.VSCode', 'code')"'''
     alt-c = '''exec-and-forget hs -c "toggleBundleFocusOnly('com.google.Chrome', 'chrome')"'''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
