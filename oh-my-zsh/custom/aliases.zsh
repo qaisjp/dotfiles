@@ -53,6 +53,7 @@ alias fetch="git fetch origin master"
 alias fetchout="git fetch origin master && git checkout -B master origin/master && git checkout"
 alias fetcherge="git fetch origin master && git merge origin/master --no-edit"
 alias fetchbase="git fetch origin master && git rebase origin/master"
+alias qr='qrencode -m2 -t utf8' # brew install qrencode
 alias buildfast="pay ci:build --all-blocking --custom-json-params '{\"desired_worker_count\": 120}'"
 alias gdc="git diff --cached"
 alias dep="henson deploy --qa --no-amp --force --skip-rollout --no-prompt"
